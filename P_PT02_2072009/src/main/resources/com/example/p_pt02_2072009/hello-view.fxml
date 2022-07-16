@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.p_pt02_2072009.HelloController">
+   <left>
+      <VBox prefHeight="465.0" prefWidth="203.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Tambah Student Baru">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="NRP:">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="nrp">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="27.0" text="Nama:">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="nama" layoutX="10.0" layoutY="44.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="69.0" text="Nilai IPA:">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="ipa" layoutX="10.0" layoutY="86.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="69.0" text="Nilai IPS">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="ips" layoutX="10.0" layoutY="128.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="tambah" mnemonicParsing="false" onAction="#tambah" text="Tambah">
+                     <HBox.margin>
+                        <Insets left="5.0" right="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="update" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#update" text="Update" />
+                  <Button fx:id="hapus" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#hapus" text="Hapus">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="tabel" onMouseClicked="#datadipilih" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="coloumn1" prefWidth="75.0" text="NRP" />
+          <TableColumn fx:id="coloumn2" prefWidth="75.0" text="Nama" />
+            <TableColumn fx:id="coloumn3" prefWidth="75.0" text="Nilai IPA" />
+            <TableColumn fx:id="coloumn4" prefWidth="75.0" text="Nilai IPS" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
